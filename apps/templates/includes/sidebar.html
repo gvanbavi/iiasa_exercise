@@ -1,0 +1,39 @@
+
+    <div class="sidebar">
+        <!--
+          Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red"
+      -->
+        <div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="javascript:void(0)" class="simple-text logo-normal">
+                    IIASA IBF
+                </a>
+            </div>
+            <ul class="nav">
+                <li class="{% if 'uploads' in segment %} active {% endif %}">
+                    <a href="/upload">
+                        <i class="tim-icons icon-chart-bar-32"></i>
+                        <p>Uploads</p>
+                    </a>
+                </li>
+                <li class="{% if 'monthly_data' in segment %} active {% endif %} ">
+                    <a href="/monthly_data">
+                        <i class="tim-icons icon-chart-pie-36"></i>
+                        <p>monthly data worldclim2.1</p>
+                    </a>
+                </li>
+                <li class="{% if 'profile' in segment %} active {% endif %}">
+                    <a href="/profile">
+                        <i class="tim-icons icon-atom"></i>
+                        <p>Profile</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('authentication_blueprint.logout') }}">
+                        <i class="tim-icons icon-button-power"></i>
+                        <p>Logout</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
